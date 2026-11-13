@@ -1,0 +1,674 @@
+/* =========================
+   ОСНОВНЫЕ ЦВЕТА
+   ========================= */
+
+:root {
+    --brown: #422B26;
+    --brown-light: #6B4940;
+    --pink: #E8A0B8;
+    --pink-light: #F7D8E0;
+    --cream: #FFF3EA;
+    --white: #FFF9F6;
+}
+
+/* =========================
+   ОСНОВА СТРАНИЦЫ
+   (стили без media query действуют на всех экранах,
+   по умолчанию они рассчитаны на смартфон)
+   ========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 20px;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--brown);
+    color: var(--cream);
+    font-family: Monospace, sans-serif;
+    line-height: 1.6;
+}
+
+#site-container {
+    flex: 1;
+}
+
+.clear {
+    clear: both;
+}
+
+/* =========================
+   ШАПКА
+   ========================= */
+
+header {
+    position: relative;
+    background-color: var(--brown);
+    padding: 20px 15px;
+    border-bottom: 1px solid rgba(247, 216, 224, 0.3);
+}
+
+.header-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    text-align: center;
+}
+
+.logo {
+    display: block;
+}
+
+.logo img {
+    display: block;
+    width: 80px;
+    height: auto;
+    margin: 0;
+    border: none;               /* убираем рамку и тень, заданные для обычных картинок */
+    border-radius: 0;
+    box-shadow: none;
+}
+
+header h1 {
+    margin: 0;
+    color: var(--pink);
+    font-size: 30px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+header p {
+    color: var(--pink-light);
+    font-size: 13px;
+    margin: 5px 0 0;
+    text-transform: uppercase;
+    text-indent: 0;
+}
+
+/* =========================
+   ГОРИЗОНТАЛЬНОЕ МЕНЮ
+   ========================= */
+
+nav {
+    background-color: var(--brown-light);
+    padding: 12px 10px;
+    border-bottom: 2px solid var(--pink);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px 18px;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    display: inline-block;
+    margin: 0;
+}
+
+nav a {
+    display: inline-block;
+    padding: 6px 4px;           
+    color: var(--cream);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+nav a:visited {
+    color: var(--cream);
+}
+
+nav a:hover {
+    color: var(--pink);
+    text-decoration: underline;
+}
+
+nav a:active {
+    color: var(--pink-light);
+}
+
+/* =========================
+   КНОПКИ
+   ========================= */
+
+.button {
+    display: inline-block;
+    background-color: var(--pink);
+    color: var(--brown);
+    padding: 12px 28px;
+    border: none;
+    border-radius: 30px;
+    text-decoration: none;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.button:visited {
+    color: var(--brown);
+}
+
+.button:hover {
+    background-color: var(--pink-light);
+    transform: translateY(-2px);
+}
+
+/* =========================
+   ГЛАВНОЕ ИЗОБРАЖЕНИЕ
+   ========================= */
+
+.hero {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 15px;
+    text-align: center;
+}
+
+/* родитель для абсолютно позиционированной плашки */
+.hero-wrap {
+    position: relative;
+    display: inline-block;
+    max-width: 100%;
+}
+
+.hero-wrap img {
+    display: block;
+    margin: 0;
+}
+
+.badge {
+    position: absolute;          /* абсолютное позиционирование */
+    top: 10px;
+    right: 10px;
+    background-color: var(--pink);
+    color: var(--brown);
+    padding: 6px 10px;
+    border-radius: 15px;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 1.3;
+    text-align: center;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* =========================
+   КАРКАС СТРАНИЦЫ (колонки)
+   ========================= */
+
+.layout {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+#content-column,
+#side-column {
+    width: 100%;
+}
+
+/* =========================
+   ОСНОВНЫЕ РАЗДЕЛЫ
+   ========================= */
+
+section {
+    margin: 0 0 25px;
+    padding: 25px 5%;
+}
+
+section:nth-of-type(even) {
+    background-color: var(--cream);
+    color: var(--brown);
+    border-radius: 35px;
+}
+
+section:nth-of-type(odd) {
+    background-color: var(--brown-light);
+    border-radius: 35px;
+}
+
+/* =========================
+   ЗАГОЛОВКИ
+   ========================= */
+
+h2 {
+    color: var(--pink);
+    font-size: 26px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 0;
+}
+
+section:nth-of-type(even) h2 {
+    color: var(--brown);
+}
+
+h3 {
+    color: var(--pink);
+    font-size: 21px;
+}
+
+section:nth-of-type(even) h3 {
+    color: var(--brown-light);
+}
+
+/* =========================
+   ТЕКСТ
+   ========================= */
+
+p {
+    font-size: 16px;
+    margin: 15px 0 20px;
+    text-indent: 25px;
+}
+
+strong {
+    color: var(--pink);
+}
+
+section:nth-of-type(even) strong {
+    color: var(--brown-light);
+}
+
+em {
+    color: var(--pink-light);
+}
+
+/* =========================
+   КАРТОЧКИ (отзывы)
+   ========================= */
+
+.card {
+    background-color: var(--pink-light);
+    color: var(--brown);
+    padding: 20px;
+    border-radius: 25px;
+    margin: 20px 0;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.card h3 {
+    color: var(--brown);
+    margin-top: 0;
+}
+
+section:nth-of-type(even) .card h3,
+section:nth-of-type(odd) .card h3 {
+    color: var(--brown);
+}
+
+.card p {
+    margin-bottom: 0;
+    text-indent: 0;
+}
+
+/* =========================
+   СПИСКИ
+   ========================= */
+
+ul,
+ol {
+    padding-left: 30px;
+}
+
+li {
+    margin: 8px 0;
+}
+
+ul li::marker {
+    color: var(--pink);
+}
+
+ol li::marker {
+    color: var(--pink);
+    font-weight: bold;
+}
+
+/* =========================
+   ВЛОЖЕННЫЙ СПИСОК
+   ========================= */
+
+section ul ul {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+section ul ul ul {
+    color: var(--brown-light);
+}
+
+/* =========================
+   ТАБЛИЦА
+   ========================= */
+
+.table-wrap {
+    overflow-x: auto;           
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 15px 0;
+    background-color: var(--white);
+    color: var(--brown);
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+th {
+    background-color: var(--pink);
+    color: var(--brown);
+    padding: 10px;
+    font-size: 14px;
+}
+
+td {
+    padding: 10px;
+    border: 1px solid #D8B7AE;
+    text-align: center;
+    font-size: 14px;
+}
+
+tr:nth-child(even) {
+    background-color: var(--pink-light);
+}
+
+tr:hover {
+    background-color: #F1C4D2;
+}
+
+/* =========================
+   ИЗОБРАЖЕНИЯ
+   ========================= */
+
+img {
+    max-width: 100%;
+    height: auto;
+    border: 5px solid var(--pink);
+    border-radius: 25px;
+    margin: 10px auto 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.fitness-image {
+    display: block;
+    width: 100%;
+    max-width: 650px;
+    height: auto;
+    margin: 20px auto;
+}
+
+.image-left {
+    float: left;
+}
+
+.image-right {
+    float: right;
+}
+
+/* =========================
+   ССЫЛКИ
+   ========================= */
+
+a {
+    color: var(--pink);
+    transition: 0.3s;
+}
+
+a:visited {
+    color: #C9859D;
+}
+
+a:hover {
+    color: var(--pink-light);
+    text-decoration: underline;
+}
+
+a:active {
+    color: white;
+}
+
+/* =========================
+   ВИДЕО
+   ========================= */
+
+iframe {
+    display: block;
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    aspect-ratio: 16 / 9;       
+    margin: 20px auto;
+    border: 5px solid var(--pink);
+    border-radius: 25px;
+}
+
+/* =========================
+   БОКОВАЯ КОЛОНКА
+   ========================= */
+
+#side-column {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin-bottom: 25px;
+}
+
+.side-box {
+    background-color: var(--pink-light);
+    color: var(--brown);
+    padding: 20px;
+    border-radius: 25px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.side-box h3 {
+    margin-top: 0;
+    color: var(--brown);
+}
+
+/* ---- Таймер ---- */
+
+.timer {
+    display: flex;
+    gap: 8px;
+}
+
+.timer-cell {
+    flex: 1;
+    background-color: var(--brown);
+    color: var(--pink);
+    border-radius: 12px;
+    padding: 8px 2px;
+    text-align: center;
+}
+
+.timer-cell span {
+    display: block;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.timer-cell small {
+    font-size: 11px;
+    color: var(--pink-light);
+}
+
+/* ---- Форма ---- */
+
+#order-form label {
+    display: block;
+    margin: 12px 0 4px;
+    font-weight: bold;
+}
+
+#order-form input,
+#order-form select {
+    width: 100%;
+    padding: 10px 12px;
+    border: 2px solid var(--pink);
+    border-radius: 12px;
+    background-color: var(--white);
+    color: var(--brown);
+    font-family: inherit;
+    font-size: 16px;            
+}
+
+#order-form input:focus,
+#order-form select:focus {
+    outline: none;
+    border-color: var(--brown-light);
+}
+
+#order-form .button {
+    width: 100%;
+}
+
+.form-message {
+    text-indent: 0;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+/* =========================
+   ФУТЕР
+   ========================= */
+
+footer {
+    background-color: #2E1D19;
+    color: var(--pink-light);
+    text-align: center;
+    padding: 25px 15px;
+    margin-top: 30px;
+    border-top: 1px solid rgba(247, 216, 224, 0.3);
+}
+
+footer p,
+footer .copyright {
+    text-indent: 0;
+    margin: 5px;
+}
+
+/* ==========================================================
+   MEDIA QUERIES — адаптивность
+   ========================================================== */
+
+/* ---------- Планшеты: от 481px до 959px ---------- */
+@media (min-width: 481px) {
+
+    header h1 {
+        font-size: 38px;
+    }
+
+    header p {
+        font-size: 15px;
+    }
+
+    nav ul {
+        gap: 10px 30px;
+    }
+
+    .badge {
+        top: 20px;
+        right: 20px;
+        padding: 10px 16px;
+        font-size: 15px;
+    }
+
+    section {
+        padding: 35px 7%;
+    }
+
+    h2 {
+        font-size: 32px;
+    }
+
+    h3 {
+        font-size: 23px;
+    }
+
+    p {
+        font-size: 17px;
+    }
+
+    th, td {
+        font-size: 16px;
+        padding: 13px;
+    }
+
+    /* боковая колонка превращается в ряд из двух блоков */
+    #side-column {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .side-box {
+        flex: 1 1 280px;
+    }
+}
+
+/* ---------- Компьютеры: от 960px ---------- */
+@media (min-width: 960px) {
+
+    header {
+        padding: 20px 140px;
+    }
+
+    .header-inner {
+        flex-direction: row;
+        gap: 25px;
+        text-align: left;
+    }
+
+    header h1 {
+        font-size: 46px;
+    }
+
+    nav ul {
+        gap: 35px;
+    }
+
+    h2 {
+        font-size: 38px;
+    }
+
+    h3 {
+        font-size: 25px;
+    }
+
+    /* две колонки: контент слева, боковая справа */
+    #content-column {
+        width: 68%;
+        float: left;
+    }
+
+    #side-column {
+        width: 30%;
+        float: right;
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+
+    .side-box {
+        flex: none;
+    }
+}

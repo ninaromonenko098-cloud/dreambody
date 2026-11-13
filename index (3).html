@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="DreamBody — фитнес-студия: виды тренировок, расписание и запись на занятие">
+	<title>DreamBody</title>
+	<link rel="stylesheet" href="style2.css">
+</head>
+<body>
+	<div id="site-container">
+
+		<!-- Шапка сайта -->
+		<header class="header">
+			<div class="header-inner">
+				<!-- Логотип -->
+				<a href="#" class="logo" aria-label="DreamBody — на главную">
+					<img src="logo.png" alt="Логотип DreamBody" width="80">
+				</a>
+				<div class="site-title">
+					<h1>DreamBody</h1>
+					<p>Твоя лучшая версия начинается здесь</p>
+				</div>
+			</div>
+		</header>
+
+		<!-- Меню -->
+		<nav>
+			<ul class="menu">
+				<li><a href="#about">О фитнесе</a></li>
+				<li><a href="#video">Видео</a></li>
+				<li><a href="#types">Виды тренировок</a></li>
+				<li><a href="#schedule">Расписание</a></li>
+				<li><a href="#reviews">Отзывы</a></li>
+				<li><a href="#order">Запись</a></li>
+			</ul>
+		</nav>
+
+		<main>
+			<!-- Главная фотография -->
+			<div class="hero">
+				<div class="hero-wrap">
+					<img class="fonovoe-image" src="fon.jpg" alt="Фоновое изображение" width="1000">
+					<span class="badge">Первое занятие<br>бесплатно!</span>
+				</div>
+			</div>
+
+			<!-- Основной блок: две колонки на широких экранах -->
+			<div class="layout">
+
+				<!-- Колонка с контентом -->
+				<div id="content-column">
+
+					<!-- О фитнесе -->
+					<section id="about">
+						<h2>О фитнесе</h2>
+						<p>
+							Фитнес — это комплекс физических занятий, направленных на поддержание активности и хорошего самочувствия.
+						</p>
+						<p>
+							На нашем сайте можно узнать о различных видах тренировок и записаться на занятия.
+						</p>
+					</section>
+
+					<!-- Видео -->
+					<section id="video">
+						<h3>Видео о фитнесе</h3>
+						<iframe
+							src="https://rutube.ru/play/embed/6a968cba59093429aca6e920b6e7a127/"
+							title="Видео о фитнесе"
+							allowfullscreen>
+						</iframe>
+					</section>
+
+					<!-- Виды тренировок -->
+					<section id="types">
+						<h2>Занятия фитнесом</h2>
+						<img class="fitness-image" src="ftt.jpg" alt="Занятие фитнесом" width="800">
+
+						<p>
+							Регулярные занятия фитнесом помогают сделать образ жизни
+							более активным. Во время тренировок важно соблюдать технику
+							выполнения упражнений и учитывать свои возможности.
+						</p>
+						<p>
+							Персональные занятия позволяют составить программу тренировок
+							с учётом целей и уровня подготовки человека.
+						</p>
+
+						<h3>Направления фитнеса</h3>
+						<ul>
+							<li>
+								Аэробные занятия
+								<ul>
+									<li>Аэробика</li>
+									<li>Танцевальная тренировка</li>
+								</ul>
+							</li>
+							<li>
+								Индивидуальные занятия
+								<ul>
+									<li>Бег</li>
+									<li>Ходьба</li>
+								</ul>
+							</li>
+						</ul>
+					</section>
+
+					<!-- Расписание -->
+					<section id="schedule">
+						<h3>Расписание занятий</h3>
+						<div class="table-wrap">
+							<table>
+								<tr>
+									<th>День</th>
+									<th>Занятие</th>
+									<th>Продолжительность</th>
+								</tr>
+								<tr>
+									<td>Понедельник</td>
+									<td>Кардиотренировка</td>
+									<td>40 минут</td>
+								</tr>
+								<tr>
+									<td>Среда</td>
+									<td>Силовая тренировка</td>
+									<td>40 минут</td>
+								</tr>
+								<tr>
+									<td>Пятница</td>
+									<td>Танцевальная тренировка</td>
+									<td>50 минут</td>
+								</tr>
+							</table>
+						</div>
+					</section>
+
+					<!-- Отзывы -->
+					<section id="reviews">
+						<h2>Отзывы</h2>
+						<div class="card">
+							<h3>Анна, 27 лет</h3>
+							<p>Занимаюсь третий месяц: появилась энергия, а тренировки не надоедают благодаря разнообразию.</p>
+						</div>
+						<div class="card">
+							<h3>Игорь, 34 года</h3>
+							<p>Персональная программа составлена с учётом моих целей. Тренер всегда следит за техникой.</p>
+						</div>
+						<div class="card">
+							<h3>Мария, 22 года</h3>
+							<p>Очень нравятся танцевальные тренировки — отличное настроение после каждого занятия!</p>
+						</div>
+					</section>
+
+				</div>
+
+				<!-- Боковая колонка -->
+				<aside id="side-column">
+
+					<!-- Таймер акции -->
+					<div class="side-box" id="timer-box">
+						<h3>До конца акции</h3>
+						<div class="timer" id="timer">
+							<div class="timer-cell"><span id="t-days">00</span><small>дней</small></div>
+							<div class="timer-cell"><span id="t-hours">00</span><small>часов</small></div>
+							<div class="timer-cell"><span id="t-min">00</span><small>минут</small></div>
+							<div class="timer-cell"><span id="t-sec">00</span><small>секунд</small></div>
+						</div>
+					</div>
+
+					<!-- Форма заказа -->
+					<div class="side-box" id="order">
+						<h3>Записаться на занятие</h3>
+						<form id="order-form" action="#" method="post">
+							<label for="name">Имя</label>
+							<input type="text" id="name" name="name" placeholder="Ваше имя" required>
+
+							<label for="phone">Телефон</label>
+							<input type="tel" id="phone" name="phone" placeholder="+7 900 000-00-00" required>
+
+							<label for="kind">Направление</label>
+							<select id="kind" name="kind">
+								<option>Кардиотренировка</option>
+								<option>Силовая тренировка</option>
+								<option>Танцевальная тренировка</option>
+								<option>Персональное занятие</option>
+							</select>
+
+							<button type="submit" class="button">Записаться</button>
+							<p class="form-message" id="form-message"></p>
+						</form>
+					</div>
+
+				</aside>
+
+				<div class="clear"></div>
+			</div>
+		</main>
+
+	</div>
+
+	<!-- Копирайт -->
+	<footer id="footer">
+		<p class="copyright">&copy;Романенко Нина, 2026</p>
+	</footer>
+
+	<script src="script.js"></script>
+</body>
+</html>
